@@ -7,6 +7,8 @@ vim.opt.clipboard = "unnamedplus"
 vim.opt.tabstop = 4
 vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
+vim.opt.pumblend = 10
+vim.opt.winblend = 10
 
 -- PLUGIN MANAGER
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
@@ -18,6 +20,14 @@ vim.opt.rtp:prepend(lazypath)
 
 -- PLUGINS
 require("lazy").setup({
+  {
+    "nyoom-engineering/oxocarbon.nvim",
+    priority = 1000,
+    config = function()
+      vim.opt.background = "dark"
+      vim.cmd("colorscheme oxocarbon")
+    end,
+  },
   {
     "nvim-telescope/telescope.nvim",
     branch = "0.1.x",
@@ -36,4 +46,4 @@ vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
-vim.keymap.set("n", "<Esc>", ":noh<CR>")
+vim.keymap.set("n", "<Esc>", ":noh<CR>" )
