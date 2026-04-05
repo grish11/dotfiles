@@ -1,6 +1,5 @@
 -- BASIC SETTINGS
 vim.g.mapleader = " "
-
 vim.opt.number = true
 vim.opt.relativenumber = true
 vim.opt.clipboard = "unnamedplus"
@@ -37,6 +36,18 @@ require("lazy").setup({
       { "<leader>fg", "<cmd>Telescope live_grep<cr>" },
     },
   },
+  {
+    "nvim-treesitter/nvim-treesitter",
+    build = ":TSUpdate",
+    event = { "BufReadPost", "BufNewFile" },
+    config = function()
+      require("nvim-treesitter.config").setup({
+        ensure_installed = { "c", "lua", "vim", "bash", "python" },
+        highlight = { enable = true },
+        indent = { enable = true },
+      })
+    end,
+  },
 })
 
 -- KEYBINDINGS
@@ -46,4 +57,9 @@ vim.keymap.set("n", "<C-k>", "<C-w>k")
 vim.keymap.set("n", "<C-l>", "<C-w>l")
 vim.keymap.set("n", "<leader>w", ":w<CR>")
 vim.keymap.set("n", "<leader>q", ":q<CR>")
-vim.keymap.set("n", "<Esc>", ":noh<CR>" )
+vim.keymap.set("n", "<Esc>", ":noh<CR>")
+
+vim.keymap.set("i", "<Up>", "<Nop>")
+vim.keymap.set("i", "<Down>", "<Nop>")
+vim.keymap.set("i", "<Left>", "<Nop>")
+vim.keymap.set("i", "<Right>", "<Nop>")

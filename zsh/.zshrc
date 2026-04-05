@@ -10,3 +10,12 @@ setopt HIST_IGNORE_SPACE         # commands starting with space aren't saved
 # ── Vi mode ─────────────────────────────────────────────
 bindkey -v                       # enable vi keybinds in terminal
 KEYTIMEOUT=1                     # faster mode switching (default is 400ms)
+
+#  extendepd globbing
+setopt extended_glob
+
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/home/may/.lmstudio/bin"
+# End of LM Studio CLI section
+
