@@ -15,7 +15,4 @@ KEYTIMEOUT=1                     # faster mode switching (default is 400ms)
 setopt extended_glob
 
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/home/may/.lmstudio/bin"
-# End of LM Studio CLI section
-
+export PATH="$HOME/.local/bin:$PATH"
