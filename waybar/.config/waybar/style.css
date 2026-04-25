@@ -1,0 +1,37 @@
+#waybar {
+    background-color: #000000;
+    color: #FFFFFF;
+}
+
+*{ 
+  font-family: "JetBrains Mono";
+  font-size: 18px; 
+}
+
+
+#workspaces button {
+    background: none;
+    color: #ffffff;
+    padding: 0 2px;
+}
+
+#workspaces button:hover {
+    background: none;
+}
+
+#workspaces button.focused {
+    background: none;
+}
+
+#workspaces button.urgent {
+    background: none;
+}
+
+#workspaces button.active {
+    background: none;
+}
+
+
+#custom-mic {
+    font-size: 14px;
+}

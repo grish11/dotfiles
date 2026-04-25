@@ -1,0 +1,60 @@
+{
+  "layer": "bottom",
+  "position": "top",
+  "height": 35,
+  "spacing": 5,
+  "modules-left": ["hyprland/workspaces", "hyprland/window"],
+  "modules-center": ["clock"],
+  "modules-right": ["cpu","memory","pulseaudio", "custom/mic", "custom/power","tray"],
+
+  "hyprland/workspaces": {
+      "format": "{name}{icon}",
+      "on-click": "activate",
+      "format-icons": {
+          "active": "*",
+          "default": ""
+      }
+  },
+
+  "cpu": {
+      "format": "[<b>cpu</b>:{usage}% /"
+  },
+
+  "memory": {
+      "format": "<b>ram</b>:{percentage}% /"
+  },
+
+  "clock": {
+      "format": "{:%I:%M %p}",
+      "format-alt": "{:%Y-%m-%d}",
+      "tooltip-format": "{calendar}"
+  },
+
+  "pulseaudio": {
+      "format": "<b>vol</b>:{volume}% /",
+      "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+      "on-click-right": "pavucontrol",
+  },
+
+  "custom/mic": {
+      "format": "{}",
+      "exec": "pactl get-source-mute @DEFAULT_SOURCE@ | grep -q 'yes' && echo -e '\\uf131' || echo -e '\\uf130'",
+      "interval": 2,
+      "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
+      "tooltip": false
+  },
+
+  "custom/power": {
+      "format": "⏻]",
+      "tooltip": false,
+      "on-click": "echo -e 'Logout\nCancel' | rofi -dmenu -p 'Power' | grep -q 'Logout' && hyprctl dispatch exit"
+  },
+
+  "tray": {
+      "icon-size": 20,
+      "spacing": 10
+  },
+
+}
+
+
