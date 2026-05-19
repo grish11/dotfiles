@@ -50,6 +50,19 @@ require("lazy").setup({
   },
 })
 
+
+-- C# configs
+
+-- local pid = vim.fn.getpid()
+--
+-- local omnisharp_bin = "/usr/local/bin/omnisharp-roslyn/OmniSharp"
+--
+-- require'lspconfig'.omnisharp.setup{
+--     cmd = { omnisharp_bin, "--languageserver" , "--hostPID", tostring(pid) }
+--     -- Additional configuration can be added here
+-- }
+--
+
 -- KEYBINDINGS
 vim.keymap.set("n", "<C-h>", "<C-w>h")
 vim.keymap.set("n", "<C-j>", "<C-w>j")
