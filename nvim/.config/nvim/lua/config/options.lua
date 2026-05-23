@@ -18,7 +18,6 @@ opt.ignorecase = true
 opt.smartcase = true
 opt.hlsearch = true
 
-
 -- Interface 
 opt.signcolumn = "yes" -- like the git diagnostics, git signs, breakpoints
 opt.cursorline = true
@@ -26,7 +25,6 @@ opt.termguicolors = true
 opt.showmode = true
 opt.winblend = 10 -- transparency level (0,100) for floating windows
 opt.pumblend = 10 -- transparency level (0,100) for the completion pop up menu
-
 
 -- System clipboard
 opt.clipboard = "unnamedplus" -- copy/paste operations work systemwide on same clipboard

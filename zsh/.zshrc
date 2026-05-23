@@ -14,3 +14,6 @@ KEYTIMEOUT=1                     # faster mode switching (default is 400ms)
 #  extendepd globbing
 setopt extended_glob
 
+#stupid transparent background on nvim, with kitty
+alias nvim='kitty --override background_opacity=1.0 -- nvim'
+
