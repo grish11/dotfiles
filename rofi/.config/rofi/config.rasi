@@ -1,0 +1,35 @@
+@theme "/home/may/.local/share/rofi/themes/squared-material-red.rasi"
+
+configuration {               
+    show-icons: true;
+}
+
+* {
+    font: "JetBrains Mono Nerd Font 12";
+    selected: #000000;
+    background: #0d0d0dCC; /* CC option for 80% opaque */
+}
+
+
+window {
+    border: 1px solid;
+    border-color: @selected;
+    background-color: @background;
+}
+
+inputbar {
+    enabled: true;
+    background-color: @background;
+}
+
+message {
+    enabled: true;
+}
+
+prompt {
+    enabled: false;
+}
+
+entry {
+    placeholder: "Search...";
+}

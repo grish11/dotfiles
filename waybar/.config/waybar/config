@@ -47,7 +47,7 @@
   "custom/power": {
       "format": "⏻]",
       "tooltip": false,
-      "on-click": "echo -e 'Logout\nCancel' | rofi -dmenu -p 'Power' | grep -q 'Logout' && hyprctl dispatch exit"
+      "on-click": "choice=$(echo -e 'Shutdown\nReboot\nLogout\nCancel' | rofi -dmenu -p 'Power'); case \"$choice\" in 'Shutdown') systemctl poweroff ;; 'Reboot') systemctl reboot ;; 'Logout') hyprctl dispatch exit ;; esac"
   },
 
   "tray": {

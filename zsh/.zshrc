@@ -14,4 +14,4 @@ KEYTIMEOUT=1                     # faster mode switching (default is 400ms)
 #  extendepd globbing
 setopt extended_glob
 
-
+export PATH="$HOME/.local/bin:$PATH"
