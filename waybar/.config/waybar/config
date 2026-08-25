@@ -1,11 +1,11 @@
 {
   "layer": "bottom",
   "position": "top",
-  "height": 35,
-  "spacing": 5,
+  "height": 30,
+  "spacing": 3,
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": ["clock"],
-  "modules-right": ["cpu","memory","pulseaudio", "custom/mic", "custom/power","tray"],
+  "modules-right": ["cpu","memory","pulseaudio", "battery", "custom/mic", "custom/power","tray"],
 
   "hyprland/workspaces": {
       "format": "{name}{icon}",
@@ -33,7 +33,12 @@
   "pulseaudio": {
       "format": "<b>vol</b>:{volume}% /",
       "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-      "on-click-right": "pavucontrol",
+      "on-click-right": "pavucontrol"
+  },
+
+  "battery": {
+      "format": "<b>bat:</b>{capacity}% /",
+      "format-charging": "<b>bat:</b>+{capacity}% /"
   },
 
   "custom/mic": {
@@ -52,7 +57,7 @@
 
   "tray": {
       "icon-size": 20,
-      "spacing": 10
+      "spacing": 8
   },
 
 }
