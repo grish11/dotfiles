@@ -15,3 +15,6 @@ KEYTIMEOUT=1                     # faster mode switching (default is 400ms)
 setopt extended_glob
 
 export PATH="$HOME/.local/bin:$PATH"
+
+# opencode
+export PATH=/home/may/.opencode/bin:$PATH
