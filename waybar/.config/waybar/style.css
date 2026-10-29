@@ -1,37 +1,36 @@
 #waybar {
-    background-color: #000000;
-    color: #FFFFFF;
+  background-color: #000000;
+  color: #ffffff;
 }
 
-*{ 
+* {
+  /* font-family: "JetBrainsMono Nerd Font"; */
   font-family: "Comic Code";
-  font-size: 18px; 
+  font-size: 18px;
 }
-
 
 #workspaces button {
-    background: none;
-    color: #ffffff;
-    padding: 0 2px;
+  background: none;
+  color: #ffffff;
+  padding: 0 2px;
 }
 
 #workspaces button:hover {
-    background: none;
+  background: none;
 }
 
 #workspaces button.focused {
-    background: none;
+  background: none;
 }
 
 #workspaces button.urgent {
-    background: none;
+  background: none;
 }
 
 #workspaces button.active {
-    background: none;
+  background: none;
 }
 
-
 #custom-mic {
-    font-size: 14px;
+  font-size: 14px;
 }

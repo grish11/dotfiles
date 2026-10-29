@@ -1,0 +1,17 @@
+[general]
+# Exit directly after copy / save action.
+early-exit = true
+
+# Ensure clipboard contents persist after satty closes.
+copy-command = "wl-copy --type image/png"
+
+# Select the tool on startup:
+#   pointer, crop, line, arrow, rectangle, text, marker, blur, brush
+initial-tool = "brush"
+
+# Outputs of saves
+output-filename = "/home/YOUR_USER/Pictures/Screenshots/sc-%Y%m%d-%H%M%S.png"
+
+# Save to clipboard when entering
+actions-on-enter = ["save-to-clipboard"]
+

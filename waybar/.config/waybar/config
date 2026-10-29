@@ -2,10 +2,10 @@
   "layer": "bottom",
   "position": "top",
   "height": 30,
-  "spacing": 3,
+  "spacing": 5,
   "modules-left": ["hyprland/workspaces", "hyprland/window"],
   "modules-center": ["clock"],
-  "modules-right": ["cpu","memory","pulseaudio", "battery", "custom/mic", "custom/power","tray"],
+  "modules-right": ["network", "cpu", "memory","pulseaudio", "battery", "custom/power","tray"],
 
   "hyprland/workspaces": {
       "format": "{name}{icon}",
@@ -16,8 +16,12 @@
       }
   },
 
+  "network": {
+      "format": "[<b>wifi</b>:{essid} {signalStrength}% /"
+  },
+
   "cpu": {
-      "format": "[<b>cpu</b>:{usage}% /"
+      "format": "<b>cpu</b>:{usage}% /"
   },
 
   "memory": {
@@ -37,28 +41,14 @@
   },
 
   "battery": {
-      "format": "<b>bat:</b>{capacity}% /",
-      "format-charging": "<b>bat:</b>+{capacity}% /"
-  },
-
-  "custom/mic": {
-      "format": "{}",
-      "exec": "pactl get-source-mute @DEFAULT_SOURCE@ | grep -q 'yes' && echo -e '\\uf131' || echo -e '\\uf130'",
-      "interval": 2,
-      "on-click": "pactl set-source-mute @DEFAULT_SOURCE@ toggle",
-      "tooltip": false
-  },
-
-  "custom/power": {
-      "format": "⏻]",
-      "tooltip": false,
-      "on-click": "choice=$(echo -e 'Shutdown\nReboot\nLogout\nCancel' | rofi -dmenu -p 'Power'); case \"$choice\" in 'Shutdown') systemctl poweroff ;; 'Reboot') systemctl reboot ;; 'Logout') hyprctl dispatch exit ;; esac"
+      "format": "<b>bat:</b>{capacity}%]",
+      "format-charging": "<b>bat:</b>+{capacity}%]"
   },
 
   "tray": {
       "icon-size": 20,
       "spacing": 8
-  },
+  }
 
 }
 

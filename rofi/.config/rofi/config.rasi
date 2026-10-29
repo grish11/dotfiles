@@ -1,11 +1,12 @@
-@theme "/home/may/.local/share/rofi/themes/squared-material-red.rasi"
+@theme "~/.config/rofi/squared-material-red.rasi"
 
 configuration {               
     show-icons: true;
 }
 
 * {
-    font: "JetBrains Mono Nerd Font 12";
+    font: "Comic Code 12";
+    // font: "JetBrainsMono Nerd Font 12";
     selected: #000000;
     background: #0d0d0dCC; /* CC option for 80% opaque */
 }
