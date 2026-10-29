@@ -45,6 +45,14 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nixpkgs.config.allowUnfree = true;
 
+  # Delete old system versions once a week. Anything newer than 14 days
+  # stays, so you can still roll back from the boot menu.
+  nix.gc = {
+    automatic = true;
+    dates = "weekly";
+    options = "--delete-older-than 14d";
+  };
+
   # --- Locale & time ---------------------------------------------------------
 
   time.timeZone = "America/Los_Angeles";
