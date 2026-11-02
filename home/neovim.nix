@@ -45,10 +45,10 @@
       keymaps = [
         {
           mode = "n";
-          key = "<leader>e";
-          action = ":Vexplore<CR>";
+          key = "E"; # Shift+E
+          action = ":Explore<CR>";
           silent = true;
-          desc = "Open netrw sidebar";
+          desc = "Open netrw in current window";
         }
       ];
 

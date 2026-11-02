@@ -14,6 +14,8 @@
     nodejs
     uv
     gleam
+    beamPackages.erlang # for gleam
+    beamPackages.rebar3 # also for gleam
     foundry
     (python3.withPackages (ps:
       with ps; [
