@@ -8,6 +8,7 @@
     ./packages.nix
     ./neovim.nix
     ./links.nix
+    ./obs.nix
   ];
 
   home = {
@@ -28,6 +29,7 @@
     enable = true;
     shellAliases = {
       rebuild = "sudo nixos-rebuild switch --flake ~/dotfiles";
+      update = "nix flake update --flake ~/dotfiles && sudo nixos-rebuild switch --flake ~/dotfiles";
       powersaver = "powerprofilesctl set power-saver";
       balanced = "powerprofilesctl set balanced";
       performance = "powerprofilesctl set performance";

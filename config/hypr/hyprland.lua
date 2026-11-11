@@ -13,9 +13,13 @@
 -- See https://wiki.hypr.land/Configuring/Basics/Monitors/
 -- Each `monitor = ...` line becomes its own hl.monitor({...}) call.
 -- mode/position keep the same "WxH@Hz" / "Xx Y" string syntax as the .conf format.
+-- laptop
 hl.monitor({ output = "eDP-1", mode = "2880x1920@120", position = "0x0", scale = 1.67 })
+
+-- home monitor
 hl.monitor({ output = "DP-2", mode = "2560x1440@180", position = "1728x0", scale = 1 })
---hl.monitor({ output = "", mode = "preferred", position = "auto", scale = 1 })
+
+hl.monitor({ output = "desc:Sony SONY PJ 0x01010101", mode = "1920x1080@24", position = "auto", scale = 1 })
 
 ---------------------
 ---- MY PROGRAMS ----

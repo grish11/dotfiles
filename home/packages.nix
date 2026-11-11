@@ -46,6 +46,10 @@
     brightnessctl
     pavucontrol
 
+    # Video player & fuzzy finder
+    mpv
+    fzf
+
     # --- Apps ---
     firefox
     tor-browser
@@ -69,6 +73,7 @@
     osu-lazer-bin
     supertux
     ninvaders
+    prismlauncher
 
     # --- Fonts ---
     nerd-fonts.jetbrains-mono
