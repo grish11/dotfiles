@@ -9,6 +9,7 @@
     unzip
     exiftool
     claude-code
+    yazi
 
     # --- Development ---
     nodejs
