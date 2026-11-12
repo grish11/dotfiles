@@ -5,7 +5,7 @@ check out my dotfiles...
 Here's an overview of what's in my setup. Configs for each are included in this
 repo.
 
-- [**nix**](https://github.com/NixOS/nixpkgs): the linux distro I use
+- [**nix**](https://github.com/NixOS/nixpkgs): the best distro created and the distro I use
 - [**hyprland**](https://github.com/hyprwm/Hyprland): dynamic tiling Wayland
   compositor
 - [**waybar**](https://github.com/Alexays/Waybar): status bar
