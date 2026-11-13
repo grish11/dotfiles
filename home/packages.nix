@@ -1,5 +1,11 @@
 # User packages, grouped by purpose.
-{pkgs, ...}: {
+{
+  pkgs,
+  inputs,
+  ...
+}: let
+  unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+in {
   home.packages = with pkgs; [
     # --- CLI tools ---
     tree
@@ -10,6 +16,7 @@
     exiftool
     claude-code
     yazi
+    unstable.ani-cli
 
     # --- Development ---
     nodejs
@@ -59,7 +66,7 @@
     bitwarden-desktop
     nautilus
     vscode
-    calibre
+    code-cursor
     xournalpp
     localsend
     lmstudio
@@ -72,8 +79,6 @@
 
     # --- Games ---
     osu-lazer-bin
-    supertux
-    ninvaders
     prismlauncher
 
     # --- Fonts ---
