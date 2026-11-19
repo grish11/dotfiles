@@ -33,6 +33,7 @@
       powersaver = "powerprofilesctl set power-saver";
       balanced = "powerprofilesctl set balanced";
       performance = "powerprofilesctl set performance";
+      cpp = "g++ -std=c++23 -Wall -Wextra -Wconversion -Wsign-conversion -pedantic-errors -Werror -g -fsanitize=address,undefined -D_GLIBCXX_ASSERTIONS";
     };
   };
 

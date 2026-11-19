@@ -7,6 +7,21 @@
 }: {
   imports = [inputs.nvf.homeManagerModules.default];
 
+  # --- C++ ---------------------------------------------------------------
+
+  # clangd (the C++ checker inside Neovim) never sees your `cpp` alias, so
+  # give it the same standard and warnings. Keep this in sync with the alias.
+  xdg.configFile."clangd/config.yaml".text = ''
+    CompileFlags:
+      Add: [-std=c++23, -Wall, -Wextra, -Wconversion, -Wsign-conversion, -pedantic-errors]
+  '';
+
+  # clang-format (runs on save) uses 2-space indents unless told otherwise.
+  home.file.".clang-format".text = ''
+    BasedOnStyle: LLVM
+    IndentWidth: 4
+  '';
+
   programs.nvf = {
     enable = true;
 
@@ -25,8 +40,8 @@
       };
 
       options = {
-        tabstop = 2;
-        shiftwidth = 2;
+        tabstop = 4;
+        shiftwidth = 4;
         autoindent = true;
         updatetime = 250;
         splitbelow = true; # :split opens below

@@ -4,7 +4,10 @@
   inputs,
   ...
 }: let
-  unstable = inputs.nixpkgs-unstable.legacyPackages.${pkgs.stdenv.hostPlatform.system};
+  unstable = import inputs.nixpkgs-unstable {
+    system = pkgs.stdenv.hostPlatform.system;
+    config.allowUnfree = true;
+  };
 in {
   home.packages = with pkgs; [
     # --- CLI tools ---
@@ -32,6 +35,9 @@ in {
         ipyparallel
         numpy
       ]))
+    gcc
+    gdb
+    sqlite
 
     # --- Hyprland desktop ---
     kitty
@@ -60,13 +66,14 @@ in {
 
     # --- Apps ---
     firefox
+    librewolf
     tor-browser
     vesktop
     spotify
     bitwarden-desktop
     nautilus
     vscode
-    code-cursor
+    unstable.code-cursor
     xournalpp
     localsend
     lmstudio
