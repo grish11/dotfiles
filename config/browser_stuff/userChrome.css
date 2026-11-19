@@ -1,0 +1,9 @@
+#TabsToolbar {
+  display: none !important;
+}
+#sidebar-panel-header {
+  display: none !important;
+}
+#sidebar-box {
+  padding-inline-end: 0px !important;
+}
