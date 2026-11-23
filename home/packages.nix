@@ -37,7 +37,7 @@ in {
       ]))
     gcc
     gdb
-    sqlite
+    sqlite-interactive
 
     # --- Hyprland desktop ---
     kitty
@@ -65,7 +65,6 @@ in {
     fzf
 
     # --- Apps ---
-    firefox
     librewolf
     tor-browser
     vesktop
@@ -76,17 +75,14 @@ in {
     unstable.code-cursor
     xournalpp
     localsend
-    lmstudio
     wootility
-
-    # --- Office ---
-    libreoffice
-    hunspell # spell checking for LibreOffice
-    hunspellDicts.en_US
 
     # --- Games ---
     osu-lazer-bin
-    prismlauncher
+    (prismlauncher.override {
+      jdks = [jdk25 jdk21 jdk17 jdk8];
+    })
+    lunar-client
 
     # --- Fonts ---
     nerd-fonts.jetbrains-mono
