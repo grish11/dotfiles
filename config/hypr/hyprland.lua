@@ -17,7 +17,7 @@
 hl.monitor({ output = "eDP-1", mode = "2880x1920@120", position = "0x0", scale = 1.67 })
 
 -- home monitor
-hl.monitor({ output = "DP-2", mode = "2560x1440@180", position = "1728x0", scale = 1 })
+--hl.monitor({ output = "DP-2", mode = "2560x1440@180", position = "1728x0", scale = 1 })
 
 --hl.monitor({ output = "", mode = "preferred", position = "auto", scale = 1 })
 hl.monitor({ output = "desc:Sony SONY PJ 0x01010101", mode = "1920x1080@24", position = "auto", scale = 1 })
@@ -211,8 +211,8 @@ hl.bind(mainMod .. " + R", hl.dsp.exec_cmd(menu)) -- menu, rofi
 hl.bind(mainMod .. " + P", hl.dsp.window.pseudo()) -- dwindle
 hl.bind(mainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle
 
--- Screenshot tool, grim + slurp + satty
-hl.bind("SUPER + S", hl.dsp.exec_cmd('g="$(slurp)" && sleep 0.15 && grim -g "$g" - | satty --filename -'))
+-- Screenshot tool, flameshot!
+hl.bind("SUPER + S", hl.dsp.exec_cmd("flameshot gui"))
 
 -- logout tool
 hl.bind(mainMod .. " + L", hl.dsp.exec_cmd("hyprlock"))
@@ -319,14 +319,14 @@ hl.window_rule({
 })
 
 -- Flameshot
--- hl.window_rule({
---     name  = "flameshot",
---     match = { class = "flameshot" },
---
---     no_anim           = true,
---     float             = true,
---     move              = "0 0",
---     pin               = true,
---     no_initial_focus  = true,
---     monitor           = 1,
---   })
+hl.window_rule({
+    name = "flameshot",
+    match = { class = "flameshot" },
+    float = true,
+    pin = true,
+    fullscreen_state = "0 0",
+    move = "0 0",
+    size = "monitor_w monitor_h",
+    border_size = 0,
+    rounding = 0,
+})

@@ -9,6 +9,7 @@
     ./neovim.nix
     ./links.nix
     ./obs.nix
+    ./flameshot.nix
   ];
 
   home = {

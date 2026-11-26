@@ -38,6 +38,7 @@ in {
     gcc
     gdb
     sqlite-interactive
+    elan
 
     # --- Hyprland desktop ---
     kitty
@@ -48,12 +49,6 @@ in {
     hyprpaper
     rose-pine-hyprcursor
     networkmanagerapplet
-
-    # --- Screenshots & clipboard (SUPER+S: slurp -> grim -> satty) ---
-    grim
-    slurp
-    satty
-    wl-clipboard
 
     # --- Media keys & audio ---
     playerctl
